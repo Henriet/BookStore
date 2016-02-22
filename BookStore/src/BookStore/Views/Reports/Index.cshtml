@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Report</h2>
+
+
+<environment names="Development">
+    <script src="~/js/report.js"></script>
+</environment>
+
+<table class="table">
+    <tr>
+        <th>
+            Category
+        </th>
+        <th>
+            Count Of Books
+        </th>
+    </tr>
+    <tbody data-bind="foreach: items">
+        <tr>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: Count"></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>List of books</h2>
+
+<p>
+    <a asp-action="Create">Create New Book</a>
+</p>
+<script src="~/js/IndexBook.js"></script>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>ISBN</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+
+    <tbody data-bind="foreach: items">
+        <tr>
+            <td data-bind="text: Name"></td>
+            <td data-bind="text: ISBN"></td>
+            <td data-bind="text: Author"></td>
+            <td data-bind="text: Categories"></td>
+            <td>
+                <a data-bind="attr: { 'href': 'Books/Edit/' + Id }">Edit</a> |
+                <a data-bind="click: $parent.Delete">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
