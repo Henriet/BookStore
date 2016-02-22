@@ -23,6 +23,9 @@
                 {
                     bookFromDb.Categories.Add(categoryFromDb);
                 }
+                bookFromDb.Name = book.Name;
+                bookFromDb.ISBN = book.ISBN;
+                bookFromDb.Author = book.Author;
                 this.DbSet.Attach(bookFromDb);
                 this.Context.Entry(bookFromDb).State = EntityState.Modified;
                 this.CommitChanges();

@@ -59,8 +59,6 @@
             categories.push(new category("", selectedCategories[i]));
         }
         var data = JSON.stringify({ Id: self.Id(), Name: self.Name(), ISBN: self.ISBN(), Author: self.Author(), Categories: categories, CategoriesList: '' });
-       // var data = JSON.stringify({ Categories: [], Id: 1, Name: "The Story Of Our Lives", ISBN: "1", Author: "Mark Strand" });
-        debugger;
         console.log(data);
         $.ajax({
             type: "PUT",
