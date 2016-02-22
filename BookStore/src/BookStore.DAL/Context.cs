@@ -6,7 +6,9 @@ namespace BookStore.DAL
     public class Context : DbContext
     {
         public Context()
-            : base("Server = tcp:bookstoretestproj.database.windows.net, 1433; Database=BookStoreTestProj_db;User ID = henriet@bookstoretestproj;Password=Books15!);Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30;")
+            : base("Data Source=(LocalDb)\\v11.0;Initial Catalog=BookStore;Integrated Security=SSPI")
+        //            : base("Server = tcp:bookstoretestproj.database.windows.net, 1433; Database=BookStoreTestProj_db;User ID = henriet@bookstoretestproj;Password=Books15!);Encrypt=True;TrustServerCertificate=False;Connection Timeout = 30;")
+
         {
             Database.SetInitializer(new BookStoreDBInitializer());
         }
